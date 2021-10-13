@@ -2,6 +2,8 @@
 
 GitHub 推出的持續整合(CI)解決方案
 
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+
 ## 基本概念
 
 ### 動作<br>Action
@@ -48,4 +50,4 @@ GitHub 推出的持續整合(CI)解決方案
 * [actions/runner: The Runner for GitHub Actions](https://github.com/actions/runner)
 * [About GitHub-hosted runners - GitHub Docs](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners)
 * [Hosting your own runners - GitHub Docs](https://docs.github.com/en/actions/hosting-your-own-runners)
-* [Workflow syntax for GitHub Actions - GitHub Docs](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobsjob_idruns-on)
+* [Workflow syntax for GitHub Actions - GitHub Docs](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions)
