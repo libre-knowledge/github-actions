@@ -11,7 +11,8 @@ name: 檢查專案中的潛在問題
 on:
   - push
 jobs:
-  check-potential-problems:
+  check-using-precommit:
+    name: 使用 pre-commit 檢查專案中的潛在問題
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
