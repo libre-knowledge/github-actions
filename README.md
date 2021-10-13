@@ -37,7 +37,7 @@ GitHub 推出的持續整合(CI)解決方案
 
 ### 執行器<br>Runner
 
-* 一個運行了 [GitHub Actions 執行器應用](https://github.com/actions/runner)，[用來執行各個[工作](#工作job)的運算節點，可以[由 GitLab 提供](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners)（有使用時間等限制）也可以[自己架設](https://docs.github.com/en/actions/hosting-your-own-runners)（可客製程度較大）
+* 一個運行了 [GitHub Actions 執行器應用](https://github.com/actions/runner)，用來執行各個[工作](#工作job)的運算節點，可以[由 GitLab 提供](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners)（有使用時間等限制）也可以[自己架設](https://docs.github.com/en/actions/hosting-your-own-runners)（可客製程度較大）
 * 一[工作](#工作job)只會在一[執行器](#執行器runner)中運行，同一[工作](#工作job)中的[步驟](#步驟step)可以共享資料
 
 ## 參考資料
