@@ -48,3 +48,4 @@ GitHub 推出的持續整合(CI)解決方案
 * [actions/runner: The Runner for GitHub Actions](https://github.com/actions/runner)
 * [About GitHub-hosted runners - GitHub Docs](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners)
 * [Hosting your own runners - GitHub Docs](https://docs.github.com/en/actions/hosting-your-own-runners)
+* [Workflow syntax for GitHub Actions - GitHub Docs](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobsjob_idruns-on)
