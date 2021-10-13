@@ -1,0 +1,10 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: GitHub Actions
+Upstream-Contact: Issues · libre-knowledge/github-actions <https://github.com/libre-knowledge/github-actions/issues>
+Source: https://github.com/libre-knowledge/github-actions
+
+Files:
+  README.md
+  */README.md
+Copyright: 2021 林博仁(Buo-ren, Lin) <Buo.Ren.Lin@gmail.com>
+License: CC-BY-SA-4.0

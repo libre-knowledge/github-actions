@@ -1,0 +1,19 @@
+# GitHub 工作流程(workflow)定義檔
+#
+# 編輯參考：
+#
+# * Workflow syntax for GitHub Actions - GitHub Docs
+#   https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobsjob_idruns-on
+#
+# Copyright 2021 林博仁(Buo-ren, Lin) <Buo.Ren.Lin@gmail.com>
+# SPDX-License-Identifier: CC-BY-SA-4.0
+name: 檢查專案中的潛在問題
+on:
+  - push
+jobs:
+  check-potential-problems:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: pip3 install pre-commit
+      - run: pre-commit run --all-files
