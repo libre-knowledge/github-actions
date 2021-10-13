@@ -20,4 +20,4 @@ jobs:
       - name: 安裝 pre-commit
         run: pip3 install pre-commit
       - name: 使用 pre-commit 檢查所有專案中的檔案
-        run: pre-commit run --all-files
+        run: pre-commit run --all-files --color always
