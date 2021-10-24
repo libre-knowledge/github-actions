@@ -1,0 +1,46 @@
+# 釋出產品與其建構產物
+#
+# 編輯參考：
+#
+# * Workflow syntax for GitHub Actions - GitHub Docs
+#   https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions
+#
+# Copyright 2021 林博仁(Buo-ren, Lin) <Buo.Ren.Lin@gmail.com>
+# SPDX-License-Identifier: CC-BY-SA-4.0
+name: 釋出產品與其建構產物
+on:
+  - push:
+      tags:
+        - 'v*.*.*'
+
+jobs:
+  release:
+    name: 使用 pre-commit 檢查專案中的潛在問題
+    runs-on: ubuntu-20.04
+    steps:
+      - name: 自版控庫取出內容
+        uses: actions/checkout@v2
+
+      - name: 判斷專案識別名
+        run: printf "project_id"=${GITHUB_REPOSITORY##*/}\\n" >> $GITHUB_ENV
+
+      - name: 判斷釋出 Git 標簽名
+        run: printf "release_tag=${GITHUB_REF##*/}\\n" >> $GITHUB_ENV
+
+      - name: 判斷釋出版本號
+        run: printf "release_version=${release_tag#v}\\n" >> $GITHUB_ENV
+
+      - name: 決定釋出識別名
+        run: printf "release_id=${project_id}-${release_version}\\n" >> $GITHUB_ENV
+
+      - name: 產出釋出包
+        run: >-
+          git archive
+          --prefix="${release_id}/"
+          --ouptut="${release_id}.tar.gz"
+          "${release_version}"
+
+      - name: 將建構產物上傳到 GitHub Releases
+        uses: softprops/action-gh-release@v0.1.13
+        files: |
+          ${{ env.release_id }}.tar*
