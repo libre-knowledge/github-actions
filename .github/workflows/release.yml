@@ -9,9 +9,9 @@
 # SPDX-License-Identifier: CC-BY-SA-4.0
 name: 釋出產品與其建構產物
 on:
-  - push:
-      tags:
-        - 'v*.*.*'
+  push:
+    tags:
+      - 'v*.*.*'
 
 jobs:
   release:
