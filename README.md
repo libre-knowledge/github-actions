@@ -52,3 +52,5 @@ GitHub 推出的持續整合(CI)解決方案
 * [Hosting your own runners - GitHub Docs](https://docs.github.com/en/actions/hosting-your-own-runners)
 * [Workflow syntax for GitHub Actions - GitHub Docs](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions)  
   工作流程定義檔的語法參考
+* [Caching dependencies to speed up workflows - GitHub Docs](https://docs.github.com/en/actions/advanced-guides/caching-dependencies-to-speed-up-workflows#using-the-cache-action)
+* [github actions example - pre-commit](https://pre-commit.com/#github-actions-example)

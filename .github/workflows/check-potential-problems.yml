@@ -21,6 +21,17 @@ jobs:
       - name: 安裝 pre-commit
         run: pip3 install pre-commit
 
+      # pre-commit github actions example
+      # https://pre-commit.com/#github-actions-example
+      - name: 偵測 pre-commit 適用的 GitHub Actions 快取鍵
+        run: echo "PY=$(python -VV | sha256sum | cut -d' ' -f1)" >> $GITHUB_ENV
+
+      - name: 保存 pre-commit 快取以縮短持續整合所需時間
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pre-commit
+          key: pre-commit|${{ env.PY }}|${{ hashFiles('.pre-commit-config.yaml') }}
+
       - name: 使用 pre-commit 檢查專案中的所有檔案
         run: pre-commit run --all-files --color always
 
