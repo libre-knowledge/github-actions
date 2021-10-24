@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: 判斷專案識別名
-        run: printf "project_id"=${GITHUB_REPOSITORY##*/}\\n" >> $GITHUB_ENV
+        run: printf "project_id=${GITHUB_REPOSITORY##*/}\\n" >> $GITHUB_ENV
 
       - name: 判斷釋出 Git 標簽名
         run: printf "release_tag=${GITHUB_REF##*/}\\n" >> $GITHUB_ENV
