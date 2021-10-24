@@ -38,7 +38,7 @@ jobs:
           git archive
           --prefix="${release_id}/"
           --output="${release_id}.tar.gz"
-          "${release_version}"
+          "${release_tag}"
 
       - name: 將建構產物上傳到 GitHub Releases
         uses: softprops/action-gh-release@v0.1.13
