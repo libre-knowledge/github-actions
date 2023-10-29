@@ -15,7 +15,7 @@ on:
 
 jobs:
   release:
-    name: 使用 pre-commit 檢查專案中的潛在問題
+    name: 釋出產品與其建構產物
     runs-on: ubuntu-20.04
     steps:
       - name: 自版控庫取出內容
