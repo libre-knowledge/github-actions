@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: 自版控庫取出內容
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: 判斷專案識別名
         run: printf "project_id=${GITHUB_REPOSITORY##*/}\\n" >> $GITHUB_ENV
