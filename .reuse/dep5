@@ -4,7 +4,7 @@ Upstream-Contact: Issues · libre-knowledge/github-actions <https://github.com/l
 Source: https://github.com/libre-knowledge/github-actions
 
 Files:
-  README.md
-  */README.md
+ *README.md
+ */README.md
 Copyright: 2021 林博仁(Buo-ren, Lin) <Buo.Ren.Lin@gmail.com>
-License: CC-BY-SA-4.0
+License: CC-BY-SA-4.0+
